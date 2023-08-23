@@ -1,3 +1,4 @@
 #!/bin/bash
-wget -P /tmp/ https://raw.github.com/Aysuarex/alx-low_level_programming/master/0x18-dynamic_libraries/nrandom.so
-export LD_PRELOAD=/tmp/nrandom.so
+gcc -wall -wextra -werror -pedantic -c -fPIC *.c
+gcc -shared -o liball.so *.o
+export LD_LIBRARY_PATH=,:$LD_LIBRARY_PATH
